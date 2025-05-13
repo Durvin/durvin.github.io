@@ -1,1 +1,0 @@
-# durvin.github.io
