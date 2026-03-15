@@ -110,6 +110,7 @@ function resetStyleAllFolders(){
         //make containers invisible
         var name = child.id.substring(6, child.id.length - 1).toLowerCase() + "Container";
         document.getElementById(name).style.visibility = "hidden";
+        document.getElementById(name).style.height = "0vh";
 
     }
 }
@@ -122,6 +123,7 @@ function styleSelectedFolder(){
     //make correct container visible
     var name = selectedFolder.id.substring(6, selectedFolder.id.length - 1).toLowerCase() + "Container";
     document.getElementById(name).style.visibility = "visible";
+    document.getElementById(name).style.height = "100vh";
 }
 
 setHoverBehaviourOnFolders();
