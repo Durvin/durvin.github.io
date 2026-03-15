@@ -1,0 +1,18 @@
+boss music: kasta sten - slagsmålsklubben
+
+change music depending on the climate
+
+fish
+
+AnMaO character - Andres Martinez (O-something at the end maybe)
+
+fix attack speed reset when moving bug
+
+indoor spaces (houses) are smaller windows, and the outside is rendered in the background, darkened
+
+fix kernel placement with regards to the range property, and the direction of the player
+
+find out why spells don't work through walls and such
+
+quest where money is in liters
+    - 20 liters of money

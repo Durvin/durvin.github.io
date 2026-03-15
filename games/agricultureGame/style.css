@@ -1,0 +1,223 @@
+#gridContainer {
+    display: grid;
+    grid-template-columns: 200px 600px;
+    grid-template-rows: 100px;
+    grid-template-areas:
+        "t1 can"
+        "t2 can"
+        "t3 can"
+        "t4 can"
+        "t5 can"
+        "t6 can"
+        "t7 can"
+        "t8 can";
+}
+
+#gridDiv{
+    display: grid;
+    height: 900px;
+    width: 1600px;
+    overflow: hidden;
+    grid-template-rows: 4fr 2fr 2fr;
+    grid-row-gap: 10px;
+    background: black;
+    transition: grid-template-rows 0.2s;
+}
+
+body{
+    background: black;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: gray;
+}
+
+
+#statistikk{
+    overflow: hidden;
+    grid-row: 2;
+    justify-content: space-between;
+    display: flex;
+    padding-top: 20px;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+
+@property --num {
+    syntax: '<integer>';
+    inherits: true;
+    initial-value: 0;
+}
+
+@property --float {
+    syntax: '<integer>';
+    inherits: true;
+    initial-value: 0;
+}
+
+td{
+    font-family: "garamond";
+    font-size: 20px;
+}
+
+.tdNum{
+    transition: --num 1.5s;
+    counter-reset: num var(--num);
+}
+
+.tdFloat{
+    transition:
+        --num 1.5s,
+        --float 1.5s;
+    counter-reset: num var(--num) float var(--float);
+}
+
+.tdNum:before{
+    content: counter(num);
+}
+
+.tdFloat:before{
+    content: counter(num) "." counter(float)
+}
+
+
+#spillInfoTabell > *{
+    margin-bottom: 50px;
+}
+
+#rundeviser{
+    font-size: 40px;
+    background: gray;
+    border-radius: 10px;
+    padding: 0px 10px;
+}
+
+
+#visualiseringsCanvas{
+    overflow: hidden;
+    grid-row: 3;
+}
+
+.aa{
+    background: rgb(126, 96, 96);
+    margin: 0px;
+    min-width: 500px;
+}
+
+
+
+#kortHolder{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    max-width: 1600px;
+    grid-row: 1;
+}
+
+.kort{
+    margin: 20px;
+    border: 5px blue solid;
+    background-color: rgb(184, 169, 169);
+    width: 220px;
+    height: 330px;
+    transition: margin-left 0.4s;
+}
+
+.kort:hover{
+    border: 15px darkblue solid;
+    margin-right: 0px;
+}
+
+.kort > *{
+    margin: 0px;
+    background-color: rgb(184, 169, 169);
+}
+
+.kort > p{
+    font-family: "comic sans ms";
+    font-size: 14px;
+}
+
+/*Added the element type to make it higher priority than the subselector above*/
+p.kortTittel{
+    text-align: center;
+    padding: 0px 8px;
+    font-size: 16px;
+    padding: 5px 0px;
+    background: gray;
+}
+
+
+.kortBilde{
+    border: 5px solid rgb(50, 64, 146);
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    background-color: rgb(106, 95, 95);
+    overflow: hidden;
+}
+
+.kortBilde > *{
+    margin: 0px;
+}
+
+.kortEffekter{
+    border-bottom: 2px solid black; /*line break for text separation*/
+    padding: 5px 5px;
+}
+
+.kortBeskrivelse{
+    padding: 5px 5px;
+}
+
+.spesialkort{
+    border: 5px green solid;
+}
+
+.spesialkort:hover{
+    border: 15px darkgreen solid;
+    margin-right: 0px;
+}
+
+.spesialkort .kortBilde{
+    border: 5px solid rgb(1, 71, 1);
+}
+
+
+#kortBunke{
+    margin: 20px;
+    border: 5px blue solid;
+    width: 220px;
+    height: 330px;
+    z-index: 1;
+    background-image: url("images/card back red.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.deckAnimation{
+    margin-left: -250px;
+}
+
+
+
+.floatText{
+    font-family: "comic sans ms";
+    font-size: 30px;
+    color:rgb(50, 200, 50);
+    position: absolute;
+    text-align: center;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    background: rgba(50, 50, 50, 0.2);
+    border-radius: 10px;
+    padding: 0px 5px;
+    transition:
+        top 3s,
+        opacity 3s;
+    transition-timing-function: linear;
+}
