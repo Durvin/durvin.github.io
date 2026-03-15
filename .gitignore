@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/games/hit hack wack/ideer.txt
+/games/isoCity/bugs.txt
+/games/SCIENCE/ideas.txt
+/games/snoverGame/audio/Tokamak Sol Cannon.ogg
+/games/snoverGame/audio/banana.mp3
+/games/snoverGame/audio/basicattack OG.mp3
+/games/snoverGame/worldmap.pdn
+/games/snoverGame/fighting cat.png
+/games/snoverGame/credits.txt
+/games/snoverGame/quests.js
