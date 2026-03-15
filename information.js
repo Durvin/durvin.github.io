@@ -82,9 +82,10 @@ var games = {
             `
             Combining some ideas i and a friend of mine had for a longer RPG, this game snippet was made.
             It does not have a lot of content, as raw JavaScript is difficult to make an editor for
-            (you cannot write to files normally), and is on of the reasons the project moved on to
+            (you cannot write to files normally), and is one of the reasons the project moved on to
             C++ eventually. There are many ideas thrown in that would fit an RPG, written with more
-            sane coding than many of my earlier works. WASD to move, and the C, M, I and 1, 2, 3 are also available.
+            sane coding than many of my earlier works.
+            WASD to move, and the C, M, I and 1, 2, 3 keys also do things.
             `
     },
 }
